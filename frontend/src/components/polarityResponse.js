@@ -1,15 +1,13 @@
 import { useState } from "react";
 
 
-const videoResponse = ()=>{
+const formInput = ()=>{
 
  
 
 return(
-    <div className="responseBlock">
-            {}
-    </div>
+<></>
 )
 }
 
-export default videoResponse
+export default formInput;
