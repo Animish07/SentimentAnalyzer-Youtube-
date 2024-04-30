@@ -43,7 +43,7 @@ app = Flask(__name__)
 @app.route("/analyze",methods =['GET','POST'])
 def analyze():
     
-    API_KEY = 'AIzaSyDPFGdbuM5JLUDr1xXkZfSgRHTRkICzVd8'
+    API_KEY = ''
     youtube = build('youtube', 'v3', developerKey=API_KEY) # initializing Youtube API
      
     # Taking for video id from json request
@@ -245,7 +245,7 @@ def analyze():
 # AIzaSyB0DRi0H3GFCvgiiE5U4eoVOqSubll-b6k
 def summarizeText(transcript_text):
     
-    genai.configure(api_key="AIzaSyB0DRi0H3GFCvgiiE5U4eoVOqSubll-b6k")
+    genai.configure(api_key="")
     prompt = """Welcome, Video Summarizer! Your task is to distill the essence of a given YouTube video transcript into a concise summary. Your summary should capture the key points and essential information, presented in bullet points, within a 250-word limit. Let's dive into the provided transcript and extract the vital details for our audience."""
     model = genai.GenerativeModel("gemini-pro")
     response = model.generate_content(prompt + transcript_text)
